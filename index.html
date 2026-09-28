@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoteNest</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Login/Register Screen -->
+    <div id="auth-screen" class="screen">
+        <div class="auth-container">
+            <h1>NoteNest</h1>
+            <p class="subtitle">Your simple student note-taking app</p>
+
+            <div class="auth-box">
+                <h2 id="auth-title">Welcome Back!</h2>
+
+                <form id="auth-form">
+                    <label for="email">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                    <label for="password">Password</label>
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter your password"
+                        required
+                    >
+
+                    <button type="submit" class="primary-button">
+                        Login
+                    </button>
+                </form>
+
+                <p class="switch-text">
+                    Don't have an account?
+                    <button id="switch-auth" class="link-button">
+                        Register
+                    </button>
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Notes Dashboard -->
+    <div id="dashboard-screen" class="screen hidden">
+
+        <header class="navbar">
+            <div>
+                <h1>NoteNest</h1>
+                <p>Keep your thoughts organized.</p>
+            </div>
+
+            <button id="logout-button" class="logout-button">
+                Logout
+            </button>
+        </header>
+
+        <main class="dashboard">
+
+            <section class="new-note-section">
+                <h2>Create a New Note</h2>
+
+                <form id="note-form">
+
+                    <input
+                        type="text"
+                        id="note-title"
+                        placeholder="Note title"
+                        required
+                    >
+
+                    <textarea
+                        id="note-content"
+                        placeholder="Write your note here..."
+                        rows="5"
+                        required
+                    ></textarea>
+
+                    <button type="submit" class="primary-button">
+                        + Add Note
+                    </button>
+
+                </form>
+            </section>
+
+
+            <section class="notes-section">
+                <div class="section-header">
+                    <h2>My Notes</h2>
+                    <span id="note-count">0 notes</span>
+                </div>
+
+                <div id="notes-container">
+
+                    <!-- Example note -->
+                    <div class="note-card">
+
+                        <div class="note-card-content">
+                            <h3>Welcome to NoteNest! 🌸</h3>
+
+                            <p>
+                                This is an example note. You can create,
+                                edit, and delete your own notes here.
+                            </p>
+                        </div>
+
+                        <div class="note-actions">
+                            <button class="edit-button">
+                                Edit
+                            </button>
+
+                            <button class="delete-button">
+                                Delete
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="app.js"></script>
+</body>
+</html>
