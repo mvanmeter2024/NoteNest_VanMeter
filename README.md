@@ -7,6 +7,11 @@ NoteNest is a simple student note-taking web application designed to help studen
 
 https://notenestvanmeter.netlify.app
 
+
+## Live Demo
+https://www.youtube.com/watch?v=HoO7I7xLWac
+
+
 ## Features
 
 - User registration and login
